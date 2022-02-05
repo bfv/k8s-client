@@ -112,5 +112,5 @@ jobs:
         file: ./Dockerfile
         platforms: linux/amd64
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/k8s-client:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/k8s-client:latest-dev
         #tag_with_ref: true
