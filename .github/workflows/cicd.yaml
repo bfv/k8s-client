@@ -49,7 +49,6 @@ jobs:
       run: |
         mkdir build/
         make
-      # go build -o build/k8s-client .
 
     # Run vet & lint on the code
     - name: Run vet & lint
