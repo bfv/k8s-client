@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # ubuntu
-RUN useradd nobody
+RUN useradd k8sclient
 
 RUN mkdir /app
 COPY build/k8s-client-linux /app/
@@ -9,6 +9,6 @@ COPY build/k8s-client-linux /app/
 RUN mv /app/k8s-client-linux /app/k8s-client && \
     chmod +x /app/k8s-client
 
-USER nobody
+USER k8sclient
 
 CMD [ "/app/k8s-client" ]
