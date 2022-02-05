@@ -6,13 +6,14 @@ import (
 	"time"
 
 	log "github.com/sirupsen/logrus"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 )
 
 func main() {
 	log.SetFormatter(&log.JSONFormatter{})
-	log.Println("Hello world!")
+	log.Println("Kubernetes CLuster logger")
 
 	config, err := rest.InClusterConfig()
 	if err != nil {
